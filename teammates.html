@@ -393,9 +393,9 @@
         </div>
 
   <div class="credit">
+
 <div>Icons made by <a href="https://www.freepik.com/" title="Freepik" id="credit_black">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons" id="credit_black">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-<div id="credit_name">© 공채린 박성우 우지명 임지원 홍유진</div>
   </div>
 
         <script>
@@ -444,93 +444,10 @@
         var i= $(this).index();
         var element = document.getElementById(array[i-1]);
         if (element.style.opacity === "100") {element.style.opacity = "0";element.style.transition ="0.2s";
-
-        var data = $(array[i-1]).serialize();
-
-                  $.ajax({
-            type: "POST",
-            url: 'addColor.php',
-            data: {opacity:'0'},
-            success: function (data) {
-                console.log(data);
-            },
-          });
-
-          $.get( "addColor.php", function(data) {
-    alert( "success" );
-}, 'text' /* xml, text, script, html */)
-.done(function(data) {
-    alert( "second success" );
-})
-.fail(function(data) {
-    alert( "error" );
-})
-.always(function(data) {
-    alert( "finished" );
-});
-
-
-          $.post( "addColor.php", {
-opacity:'0'
-}, function(data) {
-alert( "success" );
-}, 'text' /* xml, text, script, html */)
-.done(function(data) {
-alert( "second success" );
-})
-.fail(function(data) {
-alert( "error" );
-})
-.always(function(data) {
-alert( "finished" );
-});
-
-
-                  }
+        }
         else {element.style.opacity = "100";element.style.transition ="0.2s";
-              var data = $(array[i-1]).serialize();
-                  $.ajax({
-            type: "POST",
-            url: 'addColor.php',
-            data: {opacity:'100'},
-            dataType: 'text',
-            success: function (data) {
-                console.log(data);
-            },
-          });
-
-          $.get( "addColor.php", function(data) {
-    alert( "success" );
-}, 'text' /* xml, text, script, html */)
-.done(function(data) {
-    alert( "second success" );
-})
-.fail(function(data) {
-    alert( "error" );
-})
-.always(function(data) {
-    alert( "finished" );
-});
-          $.post( "addColor.php", {
-opacity:'100'
-}, function(data) {
-alert( "success" );
-}, 'text' /* xml, text, script, html */)
-.done(function(data) {
-alert( "second success" );
-})
-.fail(function(data) {
-alert( "error" );
-})
-.always(function(data) {
-alert( "finished" );
-});
-
-
-
-                    }
-
-                  });
+        }
+        });
 
 
         $('#line2 td').click(function() {
